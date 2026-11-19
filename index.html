@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د. عبد الرزّاق السّومري | السيرة العلمية والإبداعية ومتجر الإصدارات</title>
+<meta name="google-site-verification" content="c84yPMe8gXTUWa2LWTcIzFHWxUtuyouYuyp-pLpuCmY" />
+    <style>
+        :root {
+            --primary-color: #1b365d;
+            --secondary-color: #2b5b84;
+            --accent-color: #c59b27;
+            --bg-light: #f8f9fa;
+            --text-dark: #1e293b;
+            --text-muted: #5a6778;
+            --white: #ffffff;
+            --shadow: 0 10px 30px -5px rgba(27, 54, 93, 0.08);
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+        h1, h2, .serif-title {
+            font-family: 'Traditional Arabic', 'Amiri', Georgia, serif;
+        }
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.8rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        .hero {
+            padding: 8.5rem 2rem 5.5rem;
+            background: linear-gradient(135deg, #102340 0%, var(--primary-color) 100%);
+            color: var(--white);
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background-color: #2b5b84;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero h1 {
+            font-size: 3.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+        }
+        .hero-bio {
+            margin-bottom: 2.2rem;
+            color: #e2e8f0;
+            font-size: 1.05rem;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1rem;
+        }
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #102340;
+        }
+        .btn-primary:hover {
+            background-color: #d8ae36;
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        .container-section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .section-title h2 {
+            font-size: 2.6rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            right: 25%;
+        }
+        .filter-btns {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.6rem 1.6rem;
+            border: 2px solid var(--primary-color);
+            background: var(--white);
+            color: var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 2rem;
+        }
+        .work-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eef2f6;
+        }
+        .work-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px -5px rgba(27, 54, 93, 0.15);
+        }
+        .work-cover-box {
+            position: relative;
+            height: 240px;
+            background: linear-gradient(135deg, #1b365d 0%, #2b5b84 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+        .work-cover-box.creative-bg {
+            background: linear-gradient(135deg, #5c2b29 0%, #8c433e 100%);
+        }
+        .work-cover-box.joint-bg {
+            background: linear-gradient(135deg, #1f4e46 0%, #2e7367 100%);
+        }
+        .work-cover-box img.book-cover-img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+            object-fit: contain;
+            z-index: 2;
+        }
+        .cover-title-mockup {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.4;
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 1rem;
+            border-radius: 6px;
+            width: 100%;
+        }
+        .work-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--accent-color);
+            color: #102340;
+            padding: 0.25rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            z-index: 3;
+        }
+        .award-badge {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffd700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            z-index: 3;
+        }
+        .work-body {
+            padding: 1.6rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .work-title {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            line-height: 1.4;
+        }
+        .work-meta {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+        .work-desc {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .work-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eef2f6;
+            padding-top: 1rem;
+        }
+        .price {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+        .joint-note {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #1f4e46;
+            background: #e6f4f1;
+            padding: 0.45rem 1rem;
+            border-radius: 6px;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-buy {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.55rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        .btn-buy:hover {
+            background-color: var(--accent-color);
+            color: #102340;
+        }
+        .articles-wrapper {
+            background-color: #f1f5f9;
+            padding: 5rem 2rem;
+            width: 100%;
+        }
+        .articles-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .articles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        .article-card {
+            background: var(--white);
+            padding: 1.6rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-right: 4px solid var(--primary-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .article-card:hover {
+            border-right-color: var(--accent-color);
+            transform: translateY(-4px);
+        }
+        .article-title {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+        .article-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .article-title a:hover {
+            color: var(--secondary-color);
+        }
+        .article-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1.2rem;
+            padding-top: 0.9rem;
+            border-top: 1px dashed #e2e8f0;
+        }
+        .article-source {
+            font-size: 0.88rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        .btn-read-article {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 0.95rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .btn-read-article:hover {
+            background-color: var(--accent-color);
+            color: #102340;
+        }
+        .article-award {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-top: 0.4rem;
+        }
+        .cv-box {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .cv-item {
+            border-right: 3px solid var(--accent-color);
+            padding-right: 1.5rem;
+            margin-bottom: 1.8rem;
+        }
+        .cv-item:last-child {
+            margin-bottom: 0;
+        }
+        .cv-item h3 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.4rem;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(16, 35, 64, 0.7);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 92%;
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+        .form-group {
+            margin-bottom: 1.1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.35rem;
+            font-weight: 700;
+            font-size: 0.92rem;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+        .contact-box {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-top: 4px solid var(--accent-color);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1.8rem;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-light);
+            color: var(--primary-color);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            text-decoration: none;
+            border: 1px solid #e2e8f0;
+        }
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        footer {
+            background-color: #102340;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.4rem; }
+            .works-grid, .articles-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">د. عبد الرزّاق السّومري</a>
+            <ul class="nav-links">
+                <li><a href="#about">الرئيسية</a></li>
+                <li><a href="#books">الكتب والإبداعات</a></li>
+                <li><a href="#articles">البحوث والمقالات</a></li>
+                <li><a href="#cv">السيرة الذاتية</a></li>
+                <li><a href="#contact">للتواصل والاقتناء</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="profile-avatar" id="profile-container">
+                <img src="images/profile.jpg" alt="د. عبد الرزّاق السّومري" data-base="profile" onerror="tryNextImg(this, 'ع س')">
+            </div>
+            <h1>د. عبد الرزّاق السّومري</h1>
+            <p class="subtitle">باحث في السّيميائيّات وتحليل الخطاب | ناقد أدبي | روائي وقاصّ</p>
+            <p class="hero-bio">
+                باحث بمخبر السّرديات والدّراسات البينيّة بكلية الآداب والفنون والإنسانيات بمنوبة، وعضو الجمعية التونسية للدراسات السيميائية. يجمع مشروعه الفكري والإبداعي بين البحث الأكاديمي في اللسانيات والسيميائيات والعلوم العرفانية والتربوية، وبين الكتابة الروائية والقصصية المتوّجة مغاربياً.
+            </p>
+            <div class="hero-btns">
+                <a href="#books" class="btn btn-primary">تصفح واقتنِ الإصدارات</a>
+                <a href="#articles" class="btn btn-outline">البحوث والمقالات العلمية</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="books" class="container-section">
+        <div class="section-title">
+            <h2>الإصدارات العلمية والأعمال الإبداعية</h2>
+        </div>
+
+        <div class="filter-btns">
+            <button class="filter-btn active" onclick="filterWorks('all', this)">جميع الإصدارات (11)</button>
+            <button class="filter-btn" onclick="filterWorks('scientific', this)">الكتب العلمية والنقدية (5)</button>
+            <button class="filter-btn" onclick="filterWorks('creative', this)">الروايات والمجموعات القصصية (4)</button>
+            <button class="filter-btn" onclick="filterWorks('joint', this)">إصدارات بالاشتراك (2)</button>
+        </div>
+
+        <div class="works-grid">
+            <!-- 1. إضاءات عرفانية عصبية -->
+            <div class="work-card" data-category="scientific">
+                <div class="work-cover-box">
+                    <span class="work-badge">كتاب علمي • 2026</span>
+                    <img src="images/book1.jpg" alt="إضاءات عصبية عرفانية للتربية والتعليم" class="book-cover-img" data-base="book1" onerror="tryNextImg(this, 'إضاءات عصبيّة عرفانيّة للتّربية والتّعليم')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">إضاءات عرفانيّة عصبيّة للتّربية والتّعليم</h3>
+                    <div class="work-meta">دار يس للنشر، تونس — 2026</div>
+                    <p class="work-desc">مقاربة علمية حديثة تستثمر مستجدات العلوم العرفانية والعصبية في تطوير مناهج التربية وآليات التعلّم.</p>
+                    <div class="work-footer">
+                        <span class="price">25 د.ت</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('إضاءات عرفانيّة عصبيّة للتّربية والتّعليم (2026) - 25 د.ت')">
+                            طلب الكتاب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. سيميائية الإنسان -->
+            <div class="work-card" data-category="scientific">
+                <div class="work-cover-box">
+                    <span class="work-badge">كتاب علمي • 2023</span>
+                    <img src="images/book4.jpg" alt="سيميائية الإنسان" class="book-cover-img" data-base="book4" onerror="tryNextImg(this, 'سيميائيّة الإنسان: الأسس الفلسفيّة وقراءات في السّرد والشّعر')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">سيميائيّة الإنسان، بحثٌ في الأسس الفلسفيّة وقراءات في السّرد والشّعر</h3>
+                    <div class="work-meta">دار يس للنشر — 2023</div>
+                    <p class="work-desc">تأصيل فلسفي للمقاربة السيميائية للذات الإنسانية مع تطبيقات نصية في السرد والشعر العربي.</p>
+                    <div class="work-footer">
+                        <span class="price">25 د.ت</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('سيميائيّة الإنسان (2023) - 25 د.ت')">
+                            طلب الكتاب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. أدب المجالس في التراث العربي -->
+            <div class="work-card" data-category="scientific">
+                <div class="work-cover-box">
+                    <span class="work-badge">كتاب علمي • 2023</span>
+                    <img src="images/book5.jpg" alt="أدب المجالس في التراث العربي" class="book-cover-img" data-base="book5" onerror="tryNextImg(this, 'أدب المجالس في التّراث العربيّ')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">أدب المجالس في التّراث العربيّ</h3>
+                    <div class="work-meta">مجمع الأطرش للكتاب المختصّ (GLD)، تونس — 2023</div>
+                    <p class="work-desc">بحث أكاديمي متخصص في بنية المجالس الأدبية والعلمية ووظائفها التواصلية والثقافية في التراث العربي.</p>
+                    <div class="work-footer">
+                        <span class="price">متاح للاقتناء</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('أدب المجالس في التّراث العربيّ (2023)')">
+                            طلب الكتاب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. من الكلمة إلى العلامة -->
+            <div class="work-card" data-category="scientific">
+                <div class="work-cover-box">
+                    <span class="work-badge">كتاب علمي • 2014</span>
+                    <img src="images/book6.jpg" alt="من الكلمة إلى العلامة" class="book-cover-img" data-base="book6" onerror="tryNextImg(this, 'من الكلمة إلى العلامة: بحوث ومقاربات')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">من الكلمة إلى العلامة، بحوث ومقاربات</h3>
+                    <div class="work-meta">دار الورّاق الأردنيّة — 2014</div>
+                    <p class="work-desc">مجموعة بحوث ومقاربات لسانية وسيميائية ترصد التحول المنهجي من دراسة اللفظ المفرد إلى تحليل العلامة والخطاب.</p>
+                    <div class="work-footer">
+                        <span class="price">متاح للاقتناء</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('من الكلمة إلى العلامة، بحوث ومقاربات (2014)')">
+                            طلب الكتاب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. من البنوية إلى التفكيك -->
+            <div class="work-card" data-category="scientific">
+                <div class="work-cover-box">
+                    <span class="work-badge">كتاب علمي • 2006</span>
+                    <img src="images/book7.jpg" alt="من البنوية إلى التفكيك" class="book-cover-img" data-base="book7" onerror="tryNextImg(this, 'من البنويّة إلى التّفكيك: وهم الحداثة وسلطة الخطاب')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">من البنويّة إلى التّفكيك، وهم الحداثة وسلطة الخطاب</h3>
+                    <div class="work-meta">دار الجليس — 2006</div>
+                    <p class="work-desc">قراءة نقدية في المسارات الفلسفية والمنهجية لما بعد الحداثة ومساءلة سلطة الخطاب النقدي.</p>
+                    <div class="work-footer">
+                        <span class="price">متاح للاقتناء</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('من البنويّة إلى التّفكيك (2006)')">
+                            طلب الكتاب
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. رواية ورقات من تباريح الأيام -->
+            <div class="work-card" data-category="creative">
+                <div class="work-cover-box creative-bg">
+                    <span class="work-badge">رواية • 2024</span>
+                    <img src="images/book8.jpg" alt="ورقات من تباريح الأيام" class="book-cover-img" data-base="book8" onerror="tryNextImg(this, 'ورقات من تباريح الأيّام')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">ورقات من تباريح الأيّام</h3>
+                    <div class="work-meta">دار يس للنشر والتوزيع — 2024</div>
+                    <p class="work-desc">نص روائي يغوص في الذاكرة الإنسانية وتحولات الزمن وتجارب الذات بأسلوب سردي شفيف.</p>
+                    <div class="work-footer">
+                        <span class="price">متاح للاقتناء</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('رواية: ورقات من تباريح الأيّام (2024)')">
+                            طلب الرواية
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. فتنة البدايات -->
+            <div class="work-card" data-category="creative">
+                <div class="work-cover-box creative-bg">
+                    <span class="work-badge">مجموعة قصصيّة • 2022</span>
+                    <img src="images/book9.jpg" alt="فتنة البدايات" class="book-cover-img" data-base="book9" onerror="tryNextImg(this, 'فتنة البدايات')">
+                    <span class="award-badge">الجائزة المغاربية محمد العروسي المطوي 2022</span>
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">فتنة البدايات</h3>
+                    <div class="work-meta">مجموعة قصصيّة حائزة على الجائزة المغاربية — 2022</div>
+                    <p class="work-desc">نصوص قصصية تحتفي بلحظة التكوّن والدهشة الأولى، متوجة بالجائزة المغاربية للقصة القصيرة.</p>
+                    <div class="work-footer">
+                        <span class="price">متاح للاقتناء</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('مجموعة قصصية: فتنة البدايات (2022)')">
+                            طلب المجموعة
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. مرايا الزمن المتوحش -->
+            <div class="work-card" data-category="creative">
+                <div class="work-cover-box creative-bg">
+                    <span class="work-badge">رواية • 2006</span>
+                    <img src="images/book10.jpg" alt="مرايا الزمن المتوحش" class="book-cover-img" data-base="book10" onerror="tryNextImg(this, 'مرايا الزّمن المتوحّش')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">مرايا الزّمن المتوحّش</h3>
+                    <div class="work-meta">دار الأطلسيّة للنّشر، تونس — 2006</div>
+                    <p class="work-desc">رواية ترصد انكسارات الواقع وتحولات القيم في مواجهة قسوة الزمن وتناقضاته.</p>
+                    <div class="work-footer">
+                        <span class="price">متاح للاقتناء</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('رواية: مرايا الزّمن المتوحّش (2006)')">
+                            طلب الرواية
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9. زنابق تحت الجليد -->
+            <div class="work-card" data-category="creative">
+                <div class="work-cover-box creative-bg">
+                    <span class="work-badge">رواية • 2000 / ط2 2019</span>
+                    <img src="images/book11.jpg" alt="زنابق تحت الجليد" class="book-cover-img" data-base="book11" onerror="tryNextImg(this, 'زنابق تحت الجليد')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">زنابق تحت الجليد</h3>
+                    <div class="work-meta">دار الإتحاف (ط1: 2000 | ط2: 2019)</div>
+                    <p class="work-desc">العمل الروائي الأول، صدر في طبعتين، ويستكشف بذور الأمل والحياة الكامنة تحت صقيع المحن.</p>
+                    <div class="work-footer">
+                        <span class="price">متاح للاقتناء</span>
+                        <button class="btn btn-buy" onclick="openBuyModal('رواية: زنابق تحت الجليد (ط2 - 2019)')">
+                            طلب الرواية
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. الرواية الخضراء (بالاشتراك - للعرض فقط) -->
+            <div class="work-card" data-category="joint">
+                <div class="work-cover-box joint-bg">
+                    <span class="work-badge">بالاشتراك • 2026</span>
+                    <img src="images/book2.jpg" alt="الرواية الخضراء تحولات السرد وأسئلة البيئة" class="book-cover-img" data-base="book2" onerror="tryNextImg(this, 'الرّواية الخضراء: تحوّلات السّرد وأسئلة البيئة')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">الرّواية الخضراء، تحوّلات السّرد وأسئلة البيئة</h3>
+                    <div class="work-meta">منشورات بيت الرّواية، تونس (بالاشتراك) — 2026</div>
+                    <p class="work-desc">دراسة نقدية مشتركة في النقد البيئي وتحولات الخطاب الروائي المعاصر في تفاعله مع قضايا البيئة والطبيعة.</p>
+                    <div class="work-footer">
+                        <span class="joint-note">إصدار مشترك (للعرض والتعريف العلمي فقط)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. تنوع الأجناس وأبعاد الكتابة عند أبي بكر العيادي (بالاشتراك - للعرض فقط) -->
+            <div class="work-card" data-category="joint">
+                <div class="work-cover-box joint-bg">
+                    <span class="work-badge">بالاشتراك • 2024</span>
+                    <img src="images/book3.jpg" alt="تنوع الأجناس وأبعاد الكتابة عند أبي بكر العيادي" class="book-cover-img" data-base="book3" onerror="tryNextImg(this, 'تنوّع الأجناس وأبعاد الكتابة عند أبي بكر العيادي')">
+                </div>
+                <div class="work-body">
+                    <h3 class="work-title">تنوّع الأجناس وأبعاد الكتابة عند أبي بكر العيادي</h3>
+                    <div class="work-meta">دار كلمة للنشر والتوزيع (بالاشتراك) — 2024</div>
+                    <p class="work-desc">قراءات نقدية مشتركة تبحث في تعدد الأجناس الأدبية وجماليات الكتابة السردية في تجربة الأديب أبي بكر العيادي.</p>
+                    <div class="work-footer">
+                        <span class="joint-note">إصدار مشترك (للعرض والتعريف العلمي فقط)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="articles" class="articles-wrapper">
+        <div class="articles-inner">
+            <div class="section-title">
+                <h2>المقالات العلميّة والأدبيّة المحكّمة والمنشورة</h2>
+            </div>
+
+            <div class="articles-container">
+                <!-- 1. نظريات التعليم -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            <a href="https://www.anfasse.org/%D9%81%D9%84%D8%B3%D9%81%D8%A9%D9%80-%D9%88%D9%80-%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/35-%D8%B9%D9%84%D9%88%D9%85-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/3734-2010-07-11-12-20-31" target="_blank" rel="noopener noreferrer">
+                                نظريّات التّعليم والتّعلّم
+                            </a>
+                        </h3>
+                        <span class="article-award">حاصل على جائزة المقال العلمي بمركز التربية الخليجي</span>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">مجلة أنفاس المغربية</span>
+                        <a href="https://www.anfasse.org/%D9%81%D9%84%D8%B3%D9%81%D8%A9%D9%80-%D9%88%D9%80-%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/35-%D8%B9%D9%84%D9%88%D9%85-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/3734-2010-07-11-12-20-31" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            قراءة المقال ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. التعليمية: الخلفيات العرفانية والإيبستيمولوجية -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            <a href="https://www.anfasse.org/%D9%81%D9%84%D8%B3%D9%81%D8%A9%D9%80-%D9%88%D9%80-%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/35-%D8%B9%D9%84%D9%88%D9%85-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/3768-2010-08-14-01-26-07" target="_blank" rel="noopener noreferrer">
+                                التّعليمية: الخلفيات العرفانية والإيبستيمولوجية
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">مجلة أنفاس المغربية</span>
+                        <a href="https://www.anfasse.org/%D9%81%D9%84%D8%B3%D9%81%D8%A9%D9%80-%D9%88%D9%80-%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/35-%D8%B9%D9%84%D9%88%D9%85-%D8%A7%D9%84%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/3768-2010-08-14-01-26-07" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            قراءة المقال ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. الحجاج: منطلقاته، تقنياته ومفاهيمه -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            <a href="https://www.anfasse.org/%D9%81%D9%84%D8%B3%D9%81%D8%A9%D9%80-%D9%88%D9%80-%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/36-%D9%81%D9%84%D8%B3%D9%81%D8%A9/3747-2010-07-04-11-24-55" target="_blank" rel="noopener noreferrer">
+                                الحجاج: منطلقاته، تقنياته ومفاهيمه (كتاب الحيوان للجاحظ نموذجًا)
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">مجلة أنفاس / مجلّة تخاطب</span>
+                        <a href="https://www.anfasse.org/%D9%81%D9%84%D8%B3%D9%81%D8%A9%D9%80-%D9%88%D9%80-%D8%AA%D8%B1%D8%A8%D9%8A%D8%A9/36-%D9%81%D9%84%D8%B3%D9%81%D8%A9/3747-2010-07-04-11-24-55" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            قراءة المقال ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. الجملة في النظرية التوليدية -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            <a href="https://www.academia.edu/31100941/%D8%A7%D9%84%D8%AC%D9%85%D9%84%D8%A9_%D9%81%D9%8A_%D8%A7%D9%84%D9%86%D8%B8%D8%B1%D9%8A%D9%91%D8%A9_%D8%A7%D9%84%D8%AA%D9%88%D9%84%D9%8A%D8%AF%D9%8A%D9%91%D8%A9_%D9%85%D9%86_%D8%A7%D9%84%D8%A8%D9%86%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%D9%8A%D9%91%D8%A9_%D8%A5%D9%84%D9%89_%D8%A7%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC_%D8%A7%D9%84%D8%A3%D8%AF%D9%86%D9%88%D9%8A" target="_blank" rel="noopener noreferrer">
+                                الجملة في النظريّة التوليديّة: من البنيات التركيبيّة إلى البرنامج الأدنوي
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">منصة أكاديميا (Academia)</span>
+                        <a href="https://www.academia.edu/31100941/%D8%A7%D9%84%D8%AC%D9%85%D9%84%D8%A9_%D9%81%D9%8A_%D8%A7%D9%84%D9%86%D8%B8%D8%B1%D9%8A%D9%91%D8%A9_%D8%A7%D9%84%D8%AA%D9%88%D9%84%D9%8A%D8%AF%D9%8A%D9%91%D8%A9_%D9%85%D9%86_%D8%A7%D9%84%D8%A8%D9%86%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%D9%8A%D9%91%D8%A9_%D8%A5%D9%84%D9%89_%D8%A7%D9%84%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC_%D8%A7%D9%84%D8%A3%D8%AF%D9%86%D9%88%D9%8A" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            قراءة البحث ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. وحدات الخطاب والعلاقات بينها -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            <a href="https://www.academia.edu/31100991/%D9%88%D8%AD%D8%AF%D8%A7%D8%AA_%D8%A7%D9%84%D8%AE%D8%B7%D8%A7%D8%A8_%D9%88_%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA_%D8%A8%D9%8A%D9%86%D9%87%D8%A7_%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AC%D8%A7%D9%85_%D9%88_%D8%A7%D9%84%D8%A7%D8%AA%D9%91%D8%B3%D8%A7%D9%822_pdf" target="_blank" rel="noopener noreferrer">
+                                وحدات الخطاب والعلاقات بينها: مفهومَا الانسجام والاتّساق
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">منصة أكاديميا (Academia)</span>
+                        <a href="https://www.academia.edu/31100991/%D9%88%D8%AD%D8%AF%D8%A7%D8%AA_%D8%A7%D9%84%D8%AE%D8%B7%D8%A7%D8%A8_%D9%88_%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D9%82%D8%A7%D8%AA_%D8%A8%D9%8A%D9%86%D9%87%D8%A7_%D8%A7%D9%84%D8%A7%D9%86%D8%B3%D8%AC%D8%A7%D9%85_%D9%88_%D8%A7%D9%84%D8%A7%D8%AA%D9%91%D8%B3%D8%A7%D9%822_pdf" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            قراءة البحث ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. في أجناسية القصة القصيرة -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            <a href="https://www.academia.edu/38092528/%D9%81%D9%8A_%D8%A3%D8%AC%D9%86%D8%A7%D8%B3%D9%8A%D9%91%D8%A9_%D8%A7%D9%84%D9%82%D8%B5%D9%91%D8%A9_%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B1%D8%A9_doc" target="_blank" rel="noopener noreferrer">
+                                في أجناسيّة القصّة القصيرة: بحثٌ في بعض المقوّمات الأجناسيّة في الأدب العربيّ والعالميّ
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">منصة أكاديميا (Academia)</span>
+                        <a href="https://www.academia.edu/38092528/%D9%81%D9%8A_%D8%A3%D8%AC%D9%86%D8%A7%D8%B3%D9%8A%D9%91%D8%A9_%D8%A7%D9%84%D9%82%D8%B5%D9%91%D8%A9_%D8%A7%D9%84%D9%82%D8%B5%D9%8A%D8%B1%D8%A9_doc" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            قراءة البحث ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. مسرحية مغامرة رأس المملوك جابر -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            <a href="https://anfasse.org/%D9%82%D8%B5%D8%A9-%D9%88-%D8%AF%D8%B1%D8%A7%D8%B3%D8%A7%D8%AA-%D8%A3%D8%AF%D8%A8%D9%8A%D8%A9/25-%D9%82%D8%B5%D8%A9-%D9%82%D8%B5%D9%8A%D8%B1%D8%A9/4258-%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A9-%D9%85%D8%BA%D8%A7%D9%85%D8%B1%D8%A9-%D8%B1%D8%A3%D8%B3-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%88%D9%83-%D8%AC%D8%A7%D8%A8%D8%B1" target="_blank" rel="noopener noreferrer">
+                                مسرحية «مغامرة رأس المملوك جابر»: التقنيات الملحميّة وأشكال التّأصيل عند سعد الله ونّوس
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">مجلة أنفاس / ديوان العرب</span>
+                        <a href="https://anfasse.org/%D9%82%D8%B5%D8%A9-%D9%88-%D8%AF%D8%B1%D8%A7%D8%B3%D8%A7%D8%AA-%D8%A3%D8%AF%D8%A8%D9%8A%D8%A9/25-%D9%82%D8%B5%D8%A9-%D9%82%D8%B5%D9%8A%D8%B1%D8%A9/4258-%D9%85%D8%B3%D8%B1%D8%AD%D9%8A%D8%A9-%D9%85%D8%BA%D8%A7%D9%85%D8%B1%D8%A9-%D8%B1%D8%A3%D8%B3-%D8%A7%D9%84%D9%85%D9%85%D9%84%D9%88%D9%83-%D8%AC%D8%A7%D8%A8%D8%B1" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            قراءة المقال ↗
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. سيميائية الفضاء وفلسفة الأشكال الرمزية -->
+                <div class="article-card">
+                    <div>
+                        <h3 class="article-title">
+                            سيميائيّة الفضاء وفلسفة الأشكال الرّمزيّة
+                        </h3>
+                    </div>
+                    <div class="article-footer">
+                        <span class="article-source">منصة أكاديميا (Academia)</span>
+                        <a href="https://www.academia.edu/127935710/%D9%81%D9%84%D8%B3%D9%81%D8%A9_%D8%A7%D9%84%D8%A3%D8%B4%D9%83%D8%A7%D9%84_%D8%A7%D9%84%D8%B1%D9%85%D8%B2%D9%8A%D9%91%D8%A9_%D9%88%D8%B3%D9%8A%D9%85%D9%8A%D8%A7%D8%A6%D9%8A%D9%91%D8%A9_%D8%A7%D9%84%D9%81%D8%B6%D8%A7%D8%A1" target="_blank" rel="noopener noreferrer" class="btn-read-article">
+                            صفحة الباحث ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="article-card">
+  <h3>تجليات المنزع العقلي بين روح التفكير التساؤلي وإيتيقا المحاورة عند التوحيدي</h3>
+  <p class="article-summary">
+    دراسة إيبستيمولوجية وتداولية تستكشف وظيفة السؤال التوليدي وأخلاقيات المحاورة التشاركية في مدوّنات أبي حيّان التوحيدي ومجالس القرن الرابع للهجرة.
+  </p>
+  <span class="article-source">دراسة علمية (PDF)</span>
+  <a href="articles/tawhidi-dialogue.pdf" target="_blank" rel="noopener noreferrer" class="read-link">
+    قراءة البحث ↗
+  </a>
+</div>
+<div class="article-card">
+  <h3>المتنبّي: الشّاعر الطّائر بين التّسامي والتّداني</h3>
+  <p class="article-summary">
+    مقاربة بلاغية ودلالية لبيت المتنبّي في عتاب سيف الدّولة، ترصد رمزية الألوان وثنائية الباز والرّخم وتقاطع استعارة «الشّاعر الطّائر» مع قصيدة «طائر القطرس» لشارل بودلير.
+  </p>
+  <span class="article-source">دراسة أدبية ونقدية (PDF)</span>
+  <a href="articles/mutanabbi-flying-poet.pdf" target="_blank" rel="noopener noreferrer" class="read-link">
+    قراءة البحث ↗
+  </a>
+</div>
+<div class="article-card">
+  <h3>مفهوم الفضاء في فلسفة الأشكال الرّمزيّة: من الوحدة إلى التّعدّد ومن الجوهري إلى الوظيفيّ</h3>
+  <p class="article-summary">
+    دراسة فلسفية وإيبستيمولوجية تتتبع تحول مفهوم الفضاء من التصور المطلق والنسبي لدى الذريين ونيوتن ولايبنتز وكانط، وصولاً إلى الأفضية الأسطورية والجمالية والنظرية عند إرنست كاسيرر والهندسات اللاإقليدية.
+  </p>
+  <span class="article-source">دراسة فلسفية وسيميائية (PDF)</span>
+  <a href="articles/cassirer-space-symbolic-forms.pdf" target="_blank" rel="noopener noreferrer" class="read-link">
+    قراءة البحث ↗
+  </a>
+</div>
+
+
+    </section>
+
+    <section id="cv" class="container-section">
+        <div class="section-title">
+            <h2>السّيرة الذّاتيّة والمهنيّة</h2>
+        </div>
+        <div class="cv-box">
+            <div class="cv-item">
+                <h3>البطاقة التعريفية والأكاديمية</h3>
+                <p><strong>الاسم واللّقب:</strong> د. عبد الرزّاق السّومري — روائي، قاصّ وباحث في الأدب والسيميائيات (من مواليد عين دراهم، تونس).</p>
+                <p><strong>الانتماء العلمي:</strong> باحث في مخبر السّرديات والدّراسات البينيّة بكلية الآداب والفنون والإنسانيات بمنوبة، وعضو الجمعية التونسية للدراسات السيميائية.</p>
+            </div>
+            <div class="cv-item">
+                <h3>الشهادات العلمية</h3>
+                <p>• <strong>دكتوراه</strong> حول «مجالس الأدب في التراث العربي».<br>
+                   • <strong>ماجستير</strong> حول «السياق في الشعر الحديث».</p>
+<li><strong>شهادة خبير تربويّ ومكوّن</strong> في مجال إدماج تكنولوجيا المعلومات والاتّصال في التّعليم والتّعلّم.</li>
+            </div>
+            <div class="cv-item">
+                <h3>مجالات البحث والاهتمام العلمي</h3>
+                <p>السّيميائيّات، اللّسانيّات التّوليديّة، تحليل الخطاب والحجاج، النّقد البيئي (الرّواية الخضراء)، والعلوم العرفانيّة العصبيّة وتطبيقاتها في التّربية والتّعليم.</p>
+            </div>
+            <div class="cv-item">
+                <h3>أبرز التتويجات والجوائز</h3>
+                <p>• <strong>الجائزة المغاربية محمد العروسي المطوي (2022)</strong> عن المجموعة القصصية «فتنة البدايات».<br>
+                   • <strong>جائزة المقال العلمي بمركز التربية الخليجي</strong> عن بحث «نظريات التّعلّم».</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container-section" style="padding-top: 1rem;">
+        <div class="contact-box">
+            <h2 style="color: var(--primary-color); font-size: 2.3rem; margin-bottom: 0.8rem;">للتواصل الأكاديمي واقتناء الإصدارات</h2>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">
+                لطلب نسخ ورقية أو إلكترونية من الكتب والروايات المتاحة للبيع، أو للتواصل بخصوص الندوات العلمية والدراسات النقدية، يسعدني تواصلكم المباشر.
+            </p>
+            <div class="social-links">
+                <a href="mailto:your.email@example.com">البريد الإلكتروني</a>
+                <a href="https://www.academia.edu/" target="_blank" rel="noopener noreferrer">حساب Academia</a>
+                <a href="#" target="_blank">فيسبوك</a>
+                <a href="#" target="_blank">واتساب للطلبات</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 | الموقع الرسمي للباحث والأديب <strong>د. عبد الرزّاق السّومري</strong></p>
+    </footer>
+
+    <div id="buyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBuyModal()">&times;</span>
+            <h3 style="color: var(--primary-color); font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 1.9rem; margin-bottom: 0.5rem;">طلب اقتناء إصدار</h3>
+            <p id="selectedProduct" style="font-weight: 700; margin-bottom: 1.5rem; color: var(--secondary-color); background: #f1f5f9; padding: 0.7rem; border-radius: 6px;"></p>
+            
+            <form onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label>الاسم الكامل للمشتري / المؤسسة</label>
+                    <input type="text" id="buyerName" required placeholder="أدخل الاسم الكامل">
+                </div>
+                <div class="form-group">
+                    <label>نوع النسخة المطلوبة</label>
+                    <select id="copyType">
+                        <option value="نسخة ورقية (شحن بريدي)">نسخة ورقية (شحن بريدي)</option>
+                        <option value="نسخة إلكترونية (PDF)">نسخة إلكترونية (PDF)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>البريد الإلكتروني أو رقم الهاتف (واتساب)</label>
+                    <input type="text" id="buyerContact" required placeholder="للتواصل وتأكيد التسليم">
+                </div>
+                <div class="form-group">
+                    <label>العنوان البريدي أو ملاحظات إضافية</label>
+                    <textarea id="buyerNotes" rows="2" placeholder="المدينة، الدولة، أو طلب إهداء موقع من المؤلف..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                    إرسال طلب الاقتناء
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function tryNextImg(imgElement, fallbackText) {
+            const base = imgElement.getAttribute('data-base');
+            const candidates = [
+                'images/' + base + '.png',
+                'images/' + base + '.jpeg',
+                'images/' + base + '.webp',
+                base + '.jpg',
+                base + '.png',
+                base + '.jpeg'
+            ];
+            let step = parseInt(imgElement.getAttribute('data-step') || '0');
+            if (step < candidates.length) {
+                imgElement.setAttribute('data-step', step + 1);
+                imgElement.src = candidates[step];
+            } else {
+                const parent = imgElement.parentElement;
+                imgElement.style.display = 'none';
+                if (base === 'profile') {
+                    parent.innerText = fallbackText;
+                } else {
+                    const div = document.createElement('div');
+                    div.className = 'cover-title-mockup';
+                    div.innerText = fallbackText;
+                    parent.appendChild(div);
+                }
+            }
+        }
+
+        function filterWorks(category, btnElement) {
+            const cards = document.querySelectorAll('.work-card');
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        let currentBook = "";
+        function openBuyModal(bookTitle) {
+            currentBook = bookTitle;
+            document.getElementById('selectedProduct').innerText = "الإصدار المطلوب: " + bookTitle;
+            document.getElementById('buyModal').style.display = 'flex';
+        }
+
+        function closeBuyModal() {
+            document.getElementById('buyModal').style.display = 'none';
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+            const name = document.getElementById('buyerName').value;
+            const type = document.getElementById('copyType').value;
+            const contact = document.getElementById('buyerContact').value;
+            const notes = document.getElementById('buyerNotes').value;
+            const subject = encodeURIComponent("طلب اقتناء كتاب: " + currentBook);
+            const body = encodeURIComponent(
+                "مرحباً د. عبد الرزاق السومري،\n\nأرغب في اقتناء الإصدار التالي:\n" +
+                "- الكتاب: " + currentBook + "\n" +
+                "- نوع النسخة: " + type + "\n" +
+                "- اسم المشتري: " + name + "\n" +
+                "- وسيلة التواصل: " + contact + "\n" +
+                "- ملاحظات/عنوان: " + notes + "\n"
+            );
+            alert("شكراً لك " + name + ". سيتم فتح تطبيق البريد لإرسال طلبك مباشرة إلى المؤلف.");
+            window.location.href = "mailto:your.email@example.com?subject=" + subject + "&body=" + body;
+            closeBuyModal();
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('buyModal');
+            if (event.target == modal) {
+                closeBuyModal();
+            }
+        }
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const authorEmail = "soumriabderrazek@yahoo.fr";
+  let selectedBookTitle = "";
+
+  // 1. التقاط اسم الكتاب تلقائيًا عند الضغط على أي زر طلب داخل بطاقات الكتب
+  const orderButtons = document.querySelectorAll("button, a");
+  orderButtons.forEach((btn) => {
+    const text = btn.textContent.trim();
+    if (text.includes("طلب الكتاب") || text.includes("طلب الرواية") || text.includes("طلب المجموعة")) {
+      btn.addEventListener("click", function () {
+        // البحث عن عنوان الكتاب (h3) داخل نفس البطاقة
+        const card = this.closest("div, article, section");
+        const titleEl = card ? card.querySelector("h3") : null;
+        selectedBookTitle = titleEl ? titleEl.textContent.trim() : "إصدار للدكتور عبد الرزّاق السّومري";
+
+        // إظهار اسم الكتاب المختار داخل نافذة الطلب (اختياري)
+        const modalTitle = document.querySelector("#modal-book-name");
+        if (modalTitle) {
+          modalTitle.textContent = "الإصدار المختار: " + selectedBookTitle;
+        }
+      });
+    }
+  });
+
+  // 2. معالجة إرسال النموذج وتوجيهه إلى البريد الإلكتروني
+  const orderForm = document.querySelector("form");
+  if (orderForm) {
+    orderForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // جلب القيم المدخلة في حقول النموذج بالترتيب
+      const inputs = orderForm.querySelectorAll("input, select, textarea");
+      const buyerName = inputs[0] ? inputs[0].value : "";
+      const copyType = inputs[1] ? inputs[1].value : "نسخة ورقية (شحن بريدي)";
+      const buyerContact = inputs[2] ? inputs[2].value : "";
+      const addressNotes = inputs[3] ? inputs[3].value : "";
+
+      // صياغة موضوع الرسالة ومحتواها تلقائيًا
+      const subject = encodeURIComponent(`طلب اقتناء إصدار: ${selectedBookTitle}`);
+      const body = encodeURIComponent(<p id="modal-book-name" style="font-weight: bold; color: #2c5e4f;"></p>
+
+        `تحية طيبة د. عبد الرزّاق السّومري،\n\n` +
+        `أرغب في اقتناء الإصدار التالي:\n` +
+        `- عنوان الكتاب: ${selectedBookTitle}\n` +
+        `- نوع النسخة: ${copyType}\n` +
+        `- الاسم الكامل للمشتري / المؤسسة: ${buyerName}\n` +
+        `- البريد الإلكتروني أو رقم الهاتف (واتساب): ${buyerContact}\n` +
+        `- العنوان البريدي أو ملاحظات إضافية: ${addressNotes}\n\n` +
+        `مع خالص التقدير.`
+      );
+
+      // فتح تطبيق البريد الإلكتروني مع تعبئة كافة البيانات
+      window.location.href = `mailto:${authorEmail}?subject=${subject}&body=${body}`;
+    });
+  }
+});
+</script>
+
+    </script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var elements = document.querySelectorAll("button, a");
+    for (var i = 0; i < elements.length; i++) {
+      var text = elements[i].innerText.trim();
+      if (text === "طلب الكتاب" || text === "طلب الرواية" || text === "طلب المجموعة") {
+        elements[i].onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          window.open("order.html", "_blank");
+        };
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استمارة طلب الكتب - البريد السريع التونسي</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; background: #f4f7f6; color: #222; margin: 0; padding: 20px; line-height: 1.6; }
+  .box { max-width: 700px; margin: 0 auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-top: 6px solid #ffcc00; }
+  h2 { color: #003399; text-align: center; margin: 0 0 5px 0; }
+  .sub { text-align: center; color: #555; font-size: 14px; margin-bottom: 20px; }
+  .sec { font-size: 17px; font-weight: bold; color: #003399; border-bottom: 2px solid #e2e8f0; padding-bottom: 6px; margin: 20px 0 12px 0; }
+  .b-row { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 12px; margin-bottom: 8px; border: 1px solid #cbd5e1; border-radius: 6px; }
+  .b-sel { display: flex; align-items: center; gap: 10px; flex: 1; }
+  .b-sel input { width: 18px; height: 18px; cursor: pointer; }
+  .b-sel label { font-weight: 600; font-size: 14px; cursor: pointer; }
+  .b-meta { display: flex; align-items: center; gap: 10px; }
+  .b-price { font-weight: bold; color: #003399; white-space: nowrap; font-size: 14px; }
+  .b-qty { width: 55px; padding: 5px; border: 1px solid #94a3b8; border-radius: 4px; text-align: center; }
+  .fg { margin-bottom: 14px; }
+  .fg label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 14px; }
+  .fg input, .fg select, .fg textarea { width: 100%; padding: 10px; border: 1px solid #94a3b8; border-radius: 5px; font-size: 15px; font-family: inherit; }
+  .row2 { display: flex; gap: 12px; }
+  .row2 > div { flex: 1; }
+  .transfer-box { background: #fefce8; border: 1px solid #fde047; padding: 14px; border-radius: 6px; margin-bottom: 14px; }
+  .tot-box { background: #eff6ff; padding: 15px; border-radius: 6px; margin: 20px 0; border-right: 4px solid #003399; }
+  .tot-line { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 15px; }
+  .tot-all { display: flex; justify-content: space-between; font-weight: bold; font-size: 17px; color: #003399; border-top: 1px solid #bfdbfe; padding-top: 8px; margin-top: 6px; }
+  .btn { width: 100%; padding: 14px; background: #003399; color: #fff; border: none; border-radius: 6px; font-size: 17px; font-weight: bold; cursor: pointer; font-family: inherit; }
+  .btn:hover { background: #002266; }
+  .note { font-size: 13px; color: #64748b; text-align: center; margin-top: 12px; }
+  @media (max-width: 600px) {
+    .row2 { flex-direction: column; gap: 0; }
+    .b-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .b-meta { width: 100%; justify-content: space-between; padding-right: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>استمارة طلب الكتب</h2>
+  <p class="sub">التوصيل إلى كافة ولايات الجمهورية عبر <strong>البريد السريع (Rapid-Poste)</strong> بتعريفة موحّدة (6 دنانير)</p>
+
+    <form action="https://formsubmit.co/aboukhalilsoumri@gmail.com" method="POST" onsubmit="return checkForm()">
+    <input type="hidden" name="_subject" value="New Book Order">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+
+
+    <div class="sec">1. اختر الكتب والكمية المطلوبة *</div>
+    <div id="list"></div>
+
+    <input type="hidden" id="f_books" name="Ordered_Books">
+    <input type="hidden" id="f_total" name="Total_Amount">
+
+    <div class="sec">2. بيانات الشّاري وعنوان التّوصيل</div>
+
+    <div class="fg">
+      <label for="b_name">الاسم واللقب *</label>
+      <input type="text" id="b_name" name="Customer_Name" placeholder="أدخل الاسم واللقب" required>
+    </div>
+
+    <div class="row2">
+      <div class="fg">
+        <label for="b_phone">رقم الهاتف (8 أرقام) *</label>
+        <input type="tel" id="b_phone" name="Phone_Number" placeholder="مثال: 22123456" pattern="[0-9]{8}" maxlength="8" required>
+      </div>
+      <div class="fg">
+        <label for="b_email">البريد الإلكتروني (لتلقي رسالة التأكيد) *</label>
+        <input type="email" id="b_email" name="email" placeholder="example@email.com" required>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="fg">
+        <label for="b_state">الولاية *</label>
+        <select id="b_state" name="Governorate" required>
+          <option value="">-- اختر الولاية --</option>
+          <option value="أريانة">أريانة</option><option value="باجة">باجة</option><option value="بن عروس">بن عروس</option>
+          <option value="بنزرت">بنزرت</option><option value="تطاوين">تطاوين</option><option value="توزر">توزر</option>
+          <option value="تونس">تونس</option><option value="جندوبة">جندوبة</option><option value="زغوان">زغوان</option>
+          <option value="سليانة">سليانة</option><option value="سوسة">سوسة</option><option value="سيدي بوزيد">سيدي بوزيد</option>
+          <option value="صفاقس">صفاقس</option><option value="قابس">قابس</option><option value="قبلي">قبلي</option>
+          <option value="القصرين">القصرين</option><option value="قفصة">قفصة</option><option value="القيروان">القيروان</option>
+          <option value="الكاف">الكاف</option><option value="مدنين">مدنين</option><option value="المنستير">المنستير</option>
+          <option value="منوبة">منوبة</option><option value="المهدية">المهدية</option><option value="نابل">نابل</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label for="b_zip">الترقيم البريدي *</label>
+        <input type="text" id="b_zip" name="Postal_Code" placeholder="مثال: 1002" pattern="[0-9]{4}" maxlength="4" required>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label for="b_addr">العنوان البريدي العادي الكامل (النهج، الحي، المدينة) *</label>
+      <textarea id="b_addr" name="Full_Address" rows="2" placeholder="اكتب العنوان الكامل بالتفصيل..." required></textarea>
+    </div>
+
+    <div class="transfer-box">
+      <div class="row2">
+        <div class="fg" style="margin-bottom:0;">
+          <label for="b_transfer_type">نوع الحوالة البريدية *</label>
+          <select id="b_transfer_type" name="Transfer_Type" required>
+            <option value="">-- اختر نوع الحوالة --</option>
+            <option value="وفاء كاش (Wafacash)">وفاء كاش (Wafacash)</option>
+            <option value="حوالة في دقيقة (Mandat Minute)">حوالة في دقيقة (Mandat Minute)</option>
+            <option value="موني غرام (MoneyGram)">موني غرام (MoneyGram)</option>
+          </select>
+        </div>
+        <div class="fg" style="margin-bottom:0;">
+          <label for="b_transfer_num">رقم الحوالة البريدية *</label>
+          <input type="text" id="b_transfer_num" name="Transfer_Number" placeholder="أدخل رقم الحوالة بدقة" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="fg">
+      <label for="b_ded">طلب إهداء خاص من المؤلف (اختياري)</label>
+      <input type="text" id="b_ded" name="Dedication" placeholder="اكتب الاسم المراد كتابته في الإهداء...">
+    </div>
+
+    <div class="tot-box">
+      <div class="tot-line"><span>ثمن الكتب المختارة:</span><span id="t_sub">0.000 دينار</span></div>
+      <div class="tot-line"><span>تكاليف البريد السريع (Rapid-Poste):</span><span>6.000 دينار</span></div>
+      <div class="tot-all"><span>المبلغ الجملي المطلوب تحويله:</span><span id="t_all">0.000 دينار</span></div>
+    </div>
+
+    <button type="submit" class="btn">تأكيد الطلب وإرساله</button>
+    <p class="note">ستصلك رسالة تأكيد على بريدك الإلكتروني فوراً. التوصيل عبر البريد السريع (من 24 إلى 48 ساعة).</p>
+  </form>
+</div>
+
+<script>
+  var books = [
+    { t: "كتاب « إضاءات عرفانيّة عصبيّة للتّربية والتّعليم»", p: 25 },
+    { t: "كتاب « سيميائيّة الإنسان، بحثٌ في الأسس الفلسفيّة وقراءات في السّرد والشّعر»", p: 25 },
+    { t: "كتاب « أدب المجالس في التّراث العربيّ»", p: 40 },
+    { t: "كتاب « من الكلمة إلى العلامة، بحوث ومقاربات»", p: 20 },
+    { t: "كتاب « من البنويّة إلى التّفكيك، وهم الحداثة وسلطة الخطاب»", p: 20 },
+    { t: "كتاب « ورقات من تباريح الأيّام»", p: 25 },
+    { t: "كتاب « فتنة البدايات»", p: 15 },
+    { t: "كتاب « مرايا الزّمن المتوحّش»", p: 10 },
+    { t: "كتاب « زنابق تحت الجليد»", p: 15 }
+  ];
+
+  var html = "";
+  books.forEach(function(item, idx) {
+    html += '<div class="b-row"><div class="b-sel"><input type="checkbox" id="bk' + idx + '" class="chk" data-p="' + item.p + '" data-t="' + item.t + '" onchange="calc()"><label for="bk' + idx + '">' + item.t + '</label></div><div class="b-meta"><span class="b-price">' + item.p + ' دينار</span><input type="number" class="b-qty" value="1" min="1" max="20" onchange="calc()" oninput="calc()"></div></div>';
+  });
+  document.getElementById("list").innerHTML = html;
+
+  function calc() {
+    var rows = document.querySelectorAll(".b-row"), sub = 0, sel = [];
+    rows.forEach(function(row) {
+      var c = row.querySelector(".chk");
+      var q = parseInt(row.querySelector(".b-qty").value, 10) || 1;
+      if (q < 1) { q = 1; row.querySelector(".b-qty").value = 1; }
+      if (c.checked) {
+        var price = parseFloat(c.getAttribute("data-p"));
+        var title = c.getAttribute("data-t");
+        sub += price * q;
+        sel.push(title + " (الكمية: " + q + ")");
+      }
+    });
+    var ship = sub > 0 ? 6 : 0;
+    var tot = sub + ship;
+    document.getElementById("t_sub").innerText = sub.toFixed(3) + " دينار";
+    document.getElementById("t_all").innerText = tot.toFixed(3) + " دينار";
+    document.getElementById("f_books").value = sel.join(" | ");
+    document.getElementById("f_total").value = tot.toFixed(3) + " دينار";
+  }
+
+  function checkForm() {
+    calc();
+    if (document.getElementById("f_books").value === "") {
+      alert("يرجى اختيار كتاب واحد على الأقل قبل إرسال الطلب.");
+      return false;
+    }
+    return true;
+  }
+</script>
+
+</body>

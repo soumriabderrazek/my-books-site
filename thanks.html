@@ -3,23 +3,124 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تم استلام طلبكم بنجاح</title>
+<title>تم استلام طلبكم بنجاح - البريد السريع التونسي</title>
 <style>
-  body { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; background: #f4f7f6; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; }
-  .card { background: #fff; max-width: 550px; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; border-top: 6px solid #16a34a; }
-  h2 { color: #16a34a; margin-top: 0; font-size: 24px; }
-  p { color: #334155; line-height: 1.8; font-size: 16px; }
-  .btn { display: inline-block; margin-top: 20px; padding: 12px 28px; background: #003399; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold; }
-  .btn:hover { background: #002266; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: #f4f7f6;
+    color: #222;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .box {
+    width: 100%;
+    max-width: 620px;
+    background: #fff;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* شريط علوي مزدوج يجمع بين هوية البريد التونسي والأخضر التأكيدي */
+    border-top: 6px solid #ffcc00;
+    text-align: center;
+    animation: fadeIn 0.4s ease-out;
+  }
+  .badge-success {
+    width: 68px;
+    height: 68px;
+    background: #dcfce7;
+    color: #16a34a;
+    border: 2px solid #86efac;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 0 auto 18px auto;
+  }
+  h2 {
+    color: #16a34a;
+    margin: 0 0 12px 0;
+    font-size: 24px;
+  }
+  .lead {
+    color: #334155;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+  }
+  .info-box {
+    background: #eff6ff;
+    border-right: 4px solid #003399;
+    padding: 15px 18px;
+    border-radius: 6px;
+    text-align: right;
+    margin-bottom: 18px;
+    font-size: 15px;
+    color: #1e293b;
+  }
+  .info-box strong {
+    color: #003399;
+  }
+  .alert-yellow {
+    background: #fefce8;
+    border: 1px solid #fde047;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #713f12;
+    margin-bottom: 24px;
+  }
+  .btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 280px;
+    padding: 13px 24px;
+    background: #003399;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+  }
+  .btn:hover {
+    background: #002266;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 600px) {
+    .box { padding: 25px 18px; }
+    h2 { font-size: 21px; }
+    .btn { max-width: 100%; }
+  }
 </style>
 </head>
 <body>
-  <div class="card">
-    <h2>✓ تم تسجيل طلبكم بنجاح!</h2>
-    <p>شكراً لاقتنائكم الكتب. لقد تم إرسال تفاصيل طلبكم ورقم الحوالة البريدية إلى المؤلف، كما تم توجيه رسالة تأكيد إلى بريدكم الإلكتروني.</p>
-    <p>سيتم إرسال الطرد إليكم عبر <strong>البريد السريع التونسي (Rapid-Poste)</strong> في غضون 24 إلى 48 ساعة.</p>
-    <a href="index.html" class="btn">العودة إلى الصفحة الرئيسية</a>
+
+<div class="box">
+  <div class="badge-success" aria-hidden="true">✓</div>
+  <h2>تم تسجيل طلبكم بنجاح!</h2>
+  <p class="lead">شكراً لاقتنائكم إصدارات <strong>د. عبد الرزّاق السّومري</strong>. لقد تم إرسال تفاصيل طلبكم ورقم الحوالة البريدية إلى المؤلف بنجاح.</p>
+
+  <div class="info-box">
+    • <strong>الشحن والتوصيل:</strong> سيتم تجهيز الطرد وإرساله إليكم عبر <strong>البريد السريع التونسي (Rapid-Poste)</strong> في غضون <strong>24 إلى 48 ساعة</strong>.<br>
+    • <strong>رسالة التأكيد:</strong> تم توجيه نسخة تأكيدية إلى بريدكم الإلكتروني (يرجى تفقد مجلد الرسائل غير المرغوب فيها Spam إن لم تجدها في البريد الوارد).
   </div>
+
+  <div class="alert-yellow">
+    يرجى الاحتفاظ بوصل الحوالة البريدية إلى حين استلام الطرد.
+  </div>
+
+  <a href="https://abderrazeksoumri.netlify.app/" class="btn">العودة إلى الموقع الرئيسي</a>
+</div>
+
 </body>
 </html>
-
